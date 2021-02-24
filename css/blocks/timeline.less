@@ -1,0 +1,117 @@
+//main:../style.less;
+@import "../wars";
+
+.timeline {
+	margin: 60px auto;
+	display:flex;
+	width:100%;
+	max-width: 768px;
+
+	position:relative;
+
+	&:before{
+		content: "";
+		display:block;
+		width: 1px;
+		height:100%;
+		background-color:@black;
+		
+		position:absolute;
+		top:0;
+		left:50%;
+
+	}
+
+
+}
+.text-right{
+	text-align: right;
+}
+
+
+.timeline__col {
+	width: 50%;
+
+	&--left{
+		text-align: right;
+		padding-right:24px;
+	}
+	&--right{
+		padding-left: 24px;
+	}
+
+.timeline_item {
+	margin-bottom: 30px;
+	&:last-child{
+		margin-bottom: 10px;
+	}
+	&--awards{
+		display:flex;
+		justify-content: space-between;
+	}
+	@media @mobile{
+		margin-right:7px;
+	}
+}
+}
+.timeline_item_col {
+	margin-left: 10px;
+}
+.timeline__title{
+	font-size:18px;
+	text-transform: uppercase;
+	color:@black;
+	font-weight:700;
+
+	margin-bottom: 30px;
+	@media @mobile-sm{
+		font-size:15px;
+	}
+}
+.temiline_date{
+	display:block;
+
+	font-size: 14px;
+
+	text-decoration: underline;
+	color:@black;
+
+	margin-bottom:5px;
+	@media @mobile-sm{
+		font-size:11px;
+	}
+}
+.temiline__subtitle {
+	font-size:16px;
+	font-weight:700;
+	color:@black;
+	margin-bottom:3px;
+
+@media @mobile-sm{
+		font-size:13px;
+	}
+}
+.temiline__position {
+	font-size:14px;
+	font-style:italic;
+	color:@black;
+	
+}
+.temiline__text {
+	margin-top: 5px;
+	font-size: 12px;
+	color:@grey;
+	font-weight:300;
+	line-height:1.5;
+
+	@media @mobile{
+		font-size:10px;
+	}
+	@media @mobile-sm{
+		font-size:8px;
+	}
+}
+
+
+
+

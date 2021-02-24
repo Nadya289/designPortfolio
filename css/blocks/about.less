@@ -1,0 +1,137 @@
+//main:../style.less;
+@import "../wars";
+
+.about {
+	margin: 126px 0;
+}
+
+.about__inner {
+	display: flex;
+	max-width: 1090px;
+
+}
+.about__photo {
+	width: 50%;
+	position:relative;
+
+	@media @mobile-sm{
+			display:none;
+		}
+	@media @mobile{
+			display:none;
+		}
+	.img{
+		z-index: 2;
+		position:absolute;
+		bottom:0;
+
+		@media @mobile{
+			display:none;
+			
+		}
+
+	}
+
+	&:before{
+		content:"";
+		display:block;
+		height:413px;
+		width: 413px;
+		background-color: #efefef;
+		position:absolute;
+		left:1rem;
+		bottom: 0;
+		z-index: 1;
+
+		@media @tablet{
+			width: 100%;
+			
+		}
+		@media @mobile{
+			display:none;
+			
+		}
+		@media @mobile-sm{
+			display:none;
+		}
+	}
+}
+.about__content {
+	width: 50%;
+	padding-left:30px;
+	margin-top: 2rem;
+
+	@media @mobile-sm{
+		width: 100%;
+		padding:0;
+		margin: 0;
+		text-align:center;
+
+	}
+		@media @mobile{
+		width: 100%;
+		padding:0;
+		margin: 0;
+		text-align:center;
+
+	}
+			@media @tablet{
+
+		margin: 0;
+
+
+	}
+
+}
+.about__title {
+	font-size:32px;
+	text-transform: uppercase;
+	color:@black;
+
+	@media @notebook{
+	font-size:25px;
+
+	@media @mobile-sm{
+		font-size:30px;
+		text-align:center;
+}
+
+}
+}
+.about__bigTitle {
+	font-size:92px;
+	color: fade(@black, 15%);
+	text-transform:uppercase;
+	font-weight: 700;
+	line-height: 1.1;
+	margin-bottom: 22px;
+	position: relative;
+	left: -10px;
+
+@media @notebook{
+	font-size:60px;
+}
+
+@media @mobile-sm{
+		font-size:50px;
+		text-align:center;
+}
+
+
+}
+.about__text {
+	font-size:12px;
+	color:@grey;
+	line-height:2;
+	font-weight:300;
+	margin-bottom: 29px;
+	padding-right: 15px;
+
+
+}
+.img{
+	display:block;
+	max-width: 100%;
+	height: auto
+
+}

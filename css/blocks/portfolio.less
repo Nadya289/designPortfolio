@@ -1,0 +1,77 @@
+//main:../style.less;
+@import "../wars";
+
+.portfolio {
+	display:flex;
+	flex-wrap: wrap;
+	margin:0 -1rem;
+	margin-bottom:40px;
+}
+
+.portfolio__col {
+	width: 33.33333%;
+	padding:30px;
+
+	@media @mobile{
+		width: 50%;
+	}
+		@media @mobile-sm{
+		width: 100%;
+	}
+}
+
+
+.work {
+
+	box-shadow: 0 0 25px fade(#000,25%);
+	border-radius:10px;
+	overflow: hidden;
+
+	transition: box-shadow .2s linear;
+
+	&:hover{
+		box-shadow: 0 0 4px fade(#000,25%);
+	}
+	@media @mobile{
+		max-width:370px;
+	}
+	@media @mobile-sm{
+		margin:0 auto;
+	}
+}
+.work__image {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+.work__content {
+	padding:14px 10px;
+
+}
+.work__cut {
+	font-size: 12px;
+	color:@black;
+	text-transform: uppercase;
+	margin-bottom: 7px;
+}
+.work__title {
+	font-size: 16px;
+	font-weight: bold;
+	color:@black;
+	text-transform:uppercase;
+
+	display:flex;
+	justify-content: space-between;
+
+}
+.btn--sm{
+	font-size: 14px;
+	font-weight:700;
+	border-width: 2px;
+	padding:7px 5.5px;
+
+
+}
+.text-center{
+	text-align: center;
+}

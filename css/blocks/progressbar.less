@@ -1,0 +1,51 @@
+//main:../style.less;
+@import "../wars";
+
+.temeline_progressbar {
+	margin-bottom: 30px;
+@media @mobile{
+margin-right: 7px;
+
+}
+	@media @mobile-sm{
+		margin-right:7px;
+	}
+
+
+}
+.progressbar-left {
+	
+}
+.progressbar__item{
+	display:flex;
+	align-items: center;
+
+	margin-bottom: 7px;
+}
+
+.progressbar-title {
+	font-size:13px;
+	font-weight:300;
+}
+.progressba-right {
+	padding-left:18px;
+}
+.progressbar__bar {
+	width: 139px;
+	height:6px;
+	background-color: #b8b8b8;
+	
+	@media @mobile{
+		width: 85px;
+	}
+	@media @mobile-sm{
+		width: 50px;
+	}
+}
+.progressbar-progress {
+	height:100%;
+
+	background-color:@grey;
+
+
+}

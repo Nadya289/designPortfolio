@@ -1,0 +1,64 @@
+// compress: true
+@import "wars";
+
+html{
+	font-size:15px;
+}
+
+body{
+	margin: 0;
+	font-size: 1rem;
+	font-family: "Montserrat", sens-serif;
+	color: @black;
+	width: 100%;
+
+	&.no-scroll{
+		overflow: hidden;
+	}
+}
+
+*,
+*:before,
+*:after{
+	box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6{
+	margin: 0;
+}
+
+p{
+	margin: 0 0 1rem 0;
+}
+.hide{
+	display:none;
+}
+
+// vendor
+
+@import "vendor/slick.less";
+
+
+
+
+// container
+@import "blocks/container.less";
+@import "blocks/header.less";
+@import "blocks/intro.less";
+@import "blocks/social.less";
+@import "blocks/works.less";
+@import "blocks/portfolio.less";
+@import "blocks/about.less";
+@import "blocks/reviews.less";
+@import "blocks/news.less";
+@import "blocks/footer.less";
+@import "blocks/model.less";
+@import "blocks/modal-work.less";
+@import "blocks/timeline.less";
+@import "blocks/progressbar.less";
+@import "blocks/contact.less";
+@import "blocks/label.less";
+@import "blocks/input.less";
+@import "blocks/burger.less";
+
+

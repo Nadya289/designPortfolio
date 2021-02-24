@@ -1,0 +1,155 @@
+//main:../style.less;
+@import "../wars";
+
+.header{
+	padding: 1.2rem 0;
+	position:relative;
+
+	@media @mobile{
+		position:fixed;
+		top:0;
+		right:0;
+		z-index: 1000;
+		width: 100%;
+
+		background-color:white;
+	}
+
+}
+.header.fixed{
+	position:fixed;
+	background-color:white;
+	width: 100%;
+	height:auto;
+	z-index: 2000;
+}
+.header.fixed.header__inner{
+	padding:5px;
+}
+
+.header__inner{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+}
+
+.user {
+	display:flex;
+
+}
+.user__avatar {
+	width: 57px;
+	height: 57px;
+img{
+		border-radius: 50%;
+	}
+}
+
+
+.user__content {
+	padding-left: 9px;
+}
+.user__name {
+	font-weight: bold;
+	line-height: 1.2;
+	color: @black;
+	font-size: 1.06rem;
+	margin-bottom: 5px;
+}
+
+
+.user__prof {
+	font-size: 12px;
+	line-height: 1.25;
+	color: #6a696b;
+}
+.nav {
+	display:flex;
+	flex-wrap: wrap;
+	height: 100%;
+	align-items:center;
+
+	@media @mobile{
+		display:none;
+
+		position:absolute;
+		top:100%;
+		right:0;
+		z-index:1000;
+		width: 100%;
+		height: auto;
+		padding:15px;
+
+		background-color:white;
+		text-align:center;
+
+
+
+		z-index:1000;
+
+		&.show{
+			display:flex;
+
+		}
+
+	}
+
+}
+.nav__link{
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 1.21;
+	color: #2b2a2c;
+	text-transform: uppercase;
+	text-decoration: none;
+	margin-left: 30px;
+	position: relative;
+
+	&:after{
+		content: "";
+		width: 0;
+		height:2px;
+		background-color: @black;
+
+		position:absolute;
+		bottom: -5px;
+		left: 0;
+		z-index: 1;
+
+		transition: width .1s linear;
+}
+&:hover:not(.nav__link--btn){
+	&:after{
+		width: 100%;
+	}
+}
+&--btn{
+	border:1px solid @black;
+	border-radius:20px;
+	padding:11px 30px;
+
+	transition: background-color .2s linear;
+	transition: color .2s linear;
+
+
+
+	
+	&:hover{
+		background-color:@black;
+		color: @white;
+	}
+
+
+}
+
+@media @mobile{
+	width: 100%;
+	margin-left:0;
+	padding:7px 15px 0 0;
+
+
+}
+
+
+}
